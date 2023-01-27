@@ -1,40 +1,140 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<aside></aside>
+				<h1 style="color:#61dafb">React</h1>
+			</section>
+			<section>
+				<h1 style="color:#61dafb">React, what is it ?</h1>
+				<p class="fragment">React is a JavaScript library for building user interfaces.</p>
+			</section>
+			<section>
+				<h1 style="color:#61dafb">React using</h1>
+				<p class="fragment">React is used by web developers</p>
+			</section>
+			<section>
+				<h2 style="color:#61dafb">Why choose react?</h2>
+				<ul>
+					<li class="fragment">
+						React seems to be the good tool for building scalable web applications.
+					</li>
+					<li class="fragment" style="margin-top:20px">
+						React is relatively easy to learn, with a clear and concise syntax.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2 style="color:#61dafb">History of react</h2>
+				<ul>
+					<li>React was created by Jordan Valke in 2011.</li>
+					<li>React source code open May 2013</li>
+					<li>The first release of the library was released in March 2013(v 0.3.0).
+						The current version is React v18.0.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2 style="color:#61dafb">React features</h2>
+				<ul>
+					<li class="fragment">Virtual DOM</li>
+					<li class="fragment">Component development</li>
+					<li class="fragment">Using JSX and TSX</li>
+					<li class="fragment">Declarative</li>
+					<li class="fragment">React hooks</li>
+				</ul>
+			</section>
+			<section>
+				<h2 style="color:#61dafb">Virtual DOM</h2>
+				<ul>
+					<li class="fragment">The entire structure of a web page can be represented
+						using the DOM (Document Object Model)
+					</li>
+					<li class="fragment">To solve the performance problem, the concept of the virtual DOM was born.</li>
+					<li class="fragment">The virtual DOM is a lightweight copy of the standard DOM.</li>
+				</ul>
+			</section>
+			<section>
+				<h2 style="color:#61dafb">Start working</h2>
+				<pre><code data-trim>
+                        <body>
+                            <div id="app"> </div>
+                            <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+                            <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+                            <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+                            <script type="text/babel">
+		                            const rootNode = document.getElementById("app");
+		                            const root = ReactDOM.createRoot(rootNode);
+		                            root.render(
+			                            <h1>Hello React</h1>
+		                            );
+	                           </script>
+                        </body>
+                </code></pre>
+			</section>
+			<section>
+				<h2 style="color:#61dafb">JSX basics</h2>
+				<pre><code data-trim>
+                        <body>
+							<script type="text/babel">
+								ReactDOM    
+									.createRoot(document.getElementById("app"))
+									.render(
+										<h2>2 + 2 = {2 + 2}</h2>,
+									);
+							</script>
+                        </body>
+                </code></pre>
+			</section>
+			<section>
+				<h2 style="color:#61dafb">JSX basics</h2>
+				<img src="./img/JSX.png" alt="result"/>
+			</section>
+			<section>
+				<h1 style="color:#61dafb">React basics</h1>
+				<ul>
+					<li>rendering elements</li>
+					<li>components</li>
+					<li>props</li>
+					<li>events</li>
+					<li>file packaging and webpack</li>
+				</ul>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
